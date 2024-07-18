@@ -1,0 +1,32 @@
+{
+	"name": "Pegar_de_input_a_capabronce",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CONEXION_ADLS_CON_DATAFACTORY",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Nombre_de_archivo": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().Nombre_de_archivo",
+					"type": "Expression"
+				},
+				"folderPath": "capabronce",
+				"fileSystem": "proyectofinal"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
