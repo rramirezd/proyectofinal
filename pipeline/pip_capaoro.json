@@ -13,7 +13,14 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/rnzok_1@hotmail.com/Transformacion capa oro"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1_datafactory",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": []
